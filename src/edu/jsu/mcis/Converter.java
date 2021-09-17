@@ -68,7 +68,7 @@ public class Converter {
             Iterator<String[]> iterator = full.iterator();
             
             // INSERT YOUR CODE
-            JSONObject json = new JSONObject();
+                        JSONObject json = new JSONObject();
             JSONArray col = new JSONArray();
             JSONArray row = new JSONArray();
             JSONArray data = new JSONArray();
@@ -91,8 +91,7 @@ public class Converter {
             json.put("rowHeaders", row);
             json.put("colHeaders", col);
             json.put("data", data);
-            results = JSONValue.toJSONString(json);      
-
+            results = JSONValue.toJSONString(json);
         }        
         catch(Exception e) { e.printStackTrace(); }
         
@@ -110,7 +109,7 @@ public class Converter {
             CSVWriter csvWriter = new CSVWriter(writer, ',', '"', '\\', "\n");
             
             // INSERT YOUR CODE HERE
-            JSONParser parser = new JSONParser();
+                        JSONParser parser = new JSONParser();
             JSONObject json = (JSONObject)parser.parse(jsonString);
             JSONArray col = (JSONArray)json.get("colHeaders");
             JSONArray row = (JSONArray)json.get("rowHeaders");
